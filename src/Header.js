@@ -8,10 +8,20 @@ class Header extends Component {
     super();
 
     this.state = {
-      isHovered: false
+      isHovered: false,
+      entered: false
     }
 
+    this.handleClick = this.handleClick.bind(this)
     this.handleHover = this.handleHover.bind(this)
+  }
+
+  handleClick(event) {
+    event.preventDefault()
+    this.setState({
+      entered: true
+    })
+    this.props.takeEnterInfo(this.state.entered)
   }
 
   handleHover() {
@@ -25,8 +35,9 @@ class Header extends Component {
 
     return(
       <header className="App-header">
+        <h1 className="App-title">EBM DATABASE</h1>
         <img src={logo} className={imgClass} alt="logo" />
-        <button className="Enter-btn" onMouseEnter={this.handleHover}  onMouseLeave={this.handleHover}>ENTER</button>
+        <button className="Enter-btn" onMouseEnter={this.handleHover}  onMouseLeave={this.handleHover} onClick={this.handleClick}>ENTER</button>
       </header>
     )
   }
