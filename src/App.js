@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './CSS/App.css';
 import Header from './Header.js'
 import BandInfo from './BandInfo.js'
+import { ebmBands } from './ebmDatabase.js'
 
 class App extends Component {
   constructor() {

@@ -115,7 +115,7 @@ const ebmBands = {
     stillActive: true,
     countryOfOrigin: 'Denmark',
     bestSong: 'Torment Me'
-  };
+  },
 
   suicideCommando: {
     bandName: 'Suicide Commando',
@@ -314,3 +314,6 @@ const ebmBands = {
 
 }
 
+export {
+  ebmBands
+}
