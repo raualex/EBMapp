@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './CSS/BandInfo.css'
+import Card from './Card.js'
 
 
 class BandInfo extends Component {
@@ -17,6 +18,13 @@ class BandInfo extends Component {
     this.setState({
       cardName: event.target.innerHTML
     })
+    this.renderCard()
+  }
+
+  renderCard() {
+    if(this.state.cardName === document.querySelector('.bandLink').innerHTML) {
+      return(<Card />)
+    }
   }
 
   render() {
@@ -25,7 +33,7 @@ class BandInfo extends Component {
     return bandNames.map((name, index) => {
       return(
         <div className="info-container" key={index}>
-          <ul className="bandLink" onClick={this.printCard}>{this.props.bandData[name].bandName}</ul>
+          <h3 className="bandLink" onClick={this.printCard}>{this.props.bandData[name].bandName}</h3>
         </div>
       )
     })
