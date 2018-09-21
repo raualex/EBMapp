@@ -15,11 +15,6 @@ class BandInfo extends Component {
     )
   }
 
-
-
-
-
-
 }
 
 
