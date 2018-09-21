@@ -8,11 +8,16 @@ class BandInfo extends Component {
   }
 
   render() {
-    return(
-      <div className="info-container">
-        <p>TEST</p>
-      </div>
-    )
+    console.log(this.props)
+    let bandNames = Object.keys(this.props.bandData)
+    console.log(bandNames)
+    return bandNames.map((name, index) => {
+      return(
+        <div className="info-container" key={index}>
+          <h3 className="bandLink">{this.props.bandData[name].bandName}</h3>
+        </div>
+      )
+    })
   }
 
 }

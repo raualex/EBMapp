@@ -31,7 +31,7 @@ class App extends Component {
     } else {
       return (
         <div className="App">
-          <BandInfo />
+          <BandInfo bandData={ebmBands}/>
         </div>
       );      
     }
