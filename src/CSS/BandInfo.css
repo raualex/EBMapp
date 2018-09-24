@@ -8,6 +8,7 @@
 
 .bandLink:hover {
   color: red;
+  cursor: pointer;
 }
 
 .info-container {
