@@ -1,0 +1,10 @@
+.albumList {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.albumTitle {
+  display: inline-block;
+  width: 400px;
+}
