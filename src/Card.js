@@ -7,15 +7,15 @@ class Card extends Component {
   }
 
   render() {
-    return(
-      <div>
-        <ul>
-          <li>bitches</li>
-          <li>bitches</li>
-          <li>bitches</li>
-        </ul>
-      </div>
-    )
+    return this.props.cardInfo.studioAlbums.map((albumName, index) => {
+      return(
+        <div key={index}>
+          <ul className="albumList">
+            <li className="albumTitle">{albumName}</li>
+          </ul>
+        </div>
+      )
+    })
   }
 }
 
