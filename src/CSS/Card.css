@@ -1,4 +1,6 @@
 .albumList {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1em;
   list-style-type: none;
   padding: 0;
   text-align: center;
@@ -6,5 +8,7 @@
 
 .albumTitle {
   display: inline-block;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1em;
   width: 400px;
 }
