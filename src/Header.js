@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './images/cogwheel.svg';
+import logo from './utils/assets/cogwheel.svg';
 import './CSS/Header.css'
 
 
