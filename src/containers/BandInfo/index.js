@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './CSS/BandInfo.css'
-import Card from './Card.js'
+import './BandInfo.css'
+import Card from '../Card'
 
 
 class BandInfo extends Component {
