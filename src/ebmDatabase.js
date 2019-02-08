@@ -1,6 +1,6 @@
-const ebmBands = {
+const ebmBands = [
 
-  front242: {
+  {
     bandName: 'Front 242',
     currentMembers: ['Patrick Codenys', 'Daniel Bressanutti', 'Jean-Luc DeMeyer', 'Richard23'],
     pastMembers: ['Dirk Bergen'],
@@ -13,7 +13,7 @@ const ebmBands = {
     bestSong: 'Masterhit (Part 1 & 2)'
   },
 
-  andOne: {
+  {
     bandName: 'And One',
     currentMembers: ['Steve Naghavi', 'Rick Schah', 'Joke Jay', 'Nico Wieditz'],
     pastMembers: ['Chris Ruiz', 'Alex Two', 'Annelie Bertilsson', 'Gio van Oli'],
@@ -26,7 +26,7 @@ const ebmBands = {
     bestSong: 'Panzermensch'
   },
 
-  borghesia: {
+  {
     bandName: 'Borghesia',
     currentMembers: ['Also Invančić', 'Dario Seraval', 'Andraž Mazi', 'Irena Tomažin'],
     pastMembers: ['Borut Kržišnik', 'Bruno Subiotto', 'Goran Devide'],
@@ -39,20 +39,20 @@ const ebmBands = {
     bestSong: 'Ni Upanja, Ni Strahu (No Hope No Fear)'
   },
 
-  tyskeLudder: {
+  {
     bandName: 'Tyske Ludder',
     currentMembers: ['Claus Albers', 'Olaf A. Reimers', 'Ralf Homann (Z67)'],
-    pastMembers: [null],
+    pastMembers: [],
     studioAlbums: ['Bombt die Mörder?', 'Dalmarnock', 'Sojus', 'Anonymous', 'Diaspora', 'Evolution'],
     importantEPs: ['Creutzfeldt', 'Scientific Technology', 'Bambule'],
-    liveAlbums: [null],
+    liveAlbums: [],
     bestCompilation: 'Trinity',
     stillActive: true,
     countryOfOrigin: 'Germany',
     bestSong: 'Der Androgyne Held'
   },
 
-  dieKrupps: {
+  {
     bandName: 'Die Krupps',
     currentMembers: ['Jürgen Engler', 'Ralf Dörper', 'Hendrik Thiesbrummel', 'Marcel Zürcher', 'Chris Lietz'],
     pastMembers: ['Christina Schnekenburger', 'Darren Minter', 'Achim Färber', 'Bernwald Malaka', 'Eva Maria Gößling', 'Frank Köllges', 'Ralph Albertini', 'Rüdiger Esch', 'Volker Borchert', 'George Lewis', 'Lee Altus', 'Walter Jaeger'],
@@ -65,10 +65,10 @@ const ebmBands = {
     bestSong: 'Germaniac'
   },
 
-  hocico: {
+  {
     bandName: 'Hocico',
     currentMembers: ['Erk Aicrag', 'Racso Agroyam'],
-    pastMembers: [null],
+    pastMembers: [],
     studioAlbums: ['Autoagresión Persistente', 'Triste Desprecio', 'Odio Bajo el Alma', 'Los Hijos del Infierno', 'Sangre Hirviente', 'Signos de Aberracion', 'Hate Never Dies (The Celebration)', 'Wrack and Ruin', 'Memorias Atrás', 'Tora! Tora! Tora!', 'Tiempos de Furia', 'El Último Minuto Antes de Que Tu Mundo Caiga', 'Los Días Caminando en el Fuego (20 Years Keeping the Blood Boiling)', 'Die Hölle Über Berlin', 'Ofensor'],
     importantEPs: ['Disidencia Inquebrantable', 'Spider Bites'],
     liveAlbums: ['Blasphemies in the Holy Land (Live in Israel)', 'Blood on the Red Square (Live in Russia)'],
@@ -78,10 +78,10 @@ const ebmBands = {
     bestSong: 'I Abomination'
   },
 
-  agrumh: {
+  {
     bandName: 'à;GRUMH...',
     currentMembers: ['Jacques Meurrens', 'Pascal Mahieu', 'Phillippe Genion'],
-    pastMembers: [null],
+    pastMembers: [],
     studioAlbums: ['By the Phone', 'Mix Yourself!', 'No Way Out', 'Rebearth', 'Black Vinyl Under Cover/Silver Circle Under PlàstiC', 'We Are à;GRUMH... And You Are Not!', 'A Hard Knight\'s Day/A Hard Day\'s Knight'],
     importantEPs: ['Too Many Cocks Spoil the Breath', 'The Price is Right'],
     liveAlbums: ['One Side Live at the Ravenstein Gallery'],
@@ -91,12 +91,12 @@ const ebmBands = {
     bestSong: 'Hammam'
   },
 
-  aSplitSecond: {
+  {
     bandName: 'A Split - Second',
     currentMembers: ['Marc  Heyndrickx', 'Nico Mansy', 'Peter Bonne'],
     pastMembers: ['Philip V.'],
     studioAlbums: ['Stained Impressions', 'Ballistic Statues', '...From the Inside', 'Kiss of Fury', 'Flesh & Fire - 1991 Remixes', 'Vengeance C.O.D.', 'Megabite'],
-    importantEPs: [null],
+    importantEPs: [],
     liveAlbums: ['Another Violent Breed - The Live Versions'],
     bestCompilation: 'A Split-Second',
     stillActive: false,
@@ -104,23 +104,23 @@ const ebmBands = {
     bestSong: 'Flesh'
   },
 
-  leaetherStrip: {
+  {
     bandName: 'Leæther Strip',
     currentMembers: ['Claus Larsen'],
-    pastMembers: [null],
+    pastMembers: [],
     studioAlbums: ['The Pleasure of Penetration', 'Solitary Confinement', 'Underneath the Laughter', 'Serenade for the Dead', 'Legacy of Hate and Lust', 'Getting Away with Murder: Murders from 1982 to 1995', 'The Rebirth of Agony', 'Self-Inflicted', 'After the Devastation', 'The Giant Minutes to the Dawn', 'Civil Disobedience', 'Ængelmaker', 'Hærværk', 'Mental Slavery', 'Dark Passages', 'Seasons Change - I Don\'t', 'Untold Stories: The Melancholic Sessions', 'Serenade for the Dead II', 'Æppreciation', 'Æscapism', 'Spæctator', 'Æppreciation II', '50', 'World Molæster', 'Æppreciation III - Deutsche WÆlle'],
     importantEPs: ['Science for the Satanic Citizen', 'Suicide Bombers'],
-    liveAlbums: [null],
+    liveAlbums: [],
     bestCompilation: 'Fit for Flogging',
     stillActive: true,
     countryOfOrigin: 'Denmark',
     bestSong: 'Torment Me'
   },
 
-  suicideCommando: {
+  {
     bandName: 'Suicide Commando',
     currentMembers: ['Johan Van Roy', 'Torben Schmidt'],
-    pastMembers: [null],
+    pastMembers: [],
     studioAlbums: ['Critical Stage', 'Stored Images', 'Construct><Destruct', 'Mindstrip', 'Axis of Evil', 'Bind, Torture, Kill', 'Implements of Hell', 'When Evil Speaks', 'Forest of the Impaled'],
     importantEPs: ['Contamination'],
     liveAlbums: ['Rewind (Live Vintage Set)'],
@@ -130,20 +130,20 @@ const ebmBands = {
     bestSong: 'Bind, Torture, Kill'
   },
 
-  sturmCafe: {
+  {
     bandName: 'Sturm Café',
     currentMembers: ['Gustav Jansson', 'Jonatan Löfstedt'],
-    pastMembers: [null],
+    pastMembers: [],
     studioAlbums: ['So Seelisch, So Schön!', 'Europa!'],
     importantEPs: ['Tot EP', 'Es Geht'],
-    liveAlbums: [null],
+    liveAlbums: [],
     bestCompilation: 'Rarities',
     stillActive: true,
     countryOfOrigin: 'Sweden',
     bestSong: 'Der Aufstand'
   },
 
-  covenant: {
+  {
     bandName: 'Covenant',
     currentMembers: ['Andreas Catjar', 'Daniel Jonasson', 'Daniel Myer', 'Eskil Simonsson', 'Joakim Montelius'],
     pastMembers: ['Clas Nachmanson'],
@@ -156,33 +156,33 @@ const ebmBands = {
     bestSong: 'Bullet'
   },
 
-  daf: {
+  {
     bandName: 'D.A.F./Deutsch Amerikanische Freundschaft',
     currentMembers: ['Gabi Delgado López', 'Robert Görl'],
     pastMembers: ['Chrislo Haas', 'Kurt Dahlke', 'Michael Kemner', 'Wolfgang Spelmanns'],
     studioAlbums: ['Produkt der Deutsch-Amerikanischen Freundschaft', 'Die Kleinen und die Bösen', 'Alles ist Gut', 'Gold und Liebe', 'Für Immer', '1st Step to Heaven', 'Fünfzehn Neue DAF Lieder'],
-    importantEPs: [null],
-    liveAlbums: [null],
+    importantEPs: [],
+    liveAlbums: [],
     bestCompilation: 'Das Beste von DAF',
     stillActive: true,
     countryOfOrigin: 'Germany',
     bestSong: 'Der Mussolini'
   },
 
-  danceOrDie: {
+  {
     bandName: 'Dance or Die',
     currentMembers: ['Andreas Goldacker', 'Chris L.', 'Gary Wagner', 'Heiko Duus'],
     pastMembers: ['Norbert Drescher'],
     studioAlbums: ['3001', 'Psychoburbia', 'Everspring', 'Dehumanizer', 'Schlafendeenergie', 'Nostradamnation'],
-    importantEPs: [null],
-    liveAlbums: [null],
+    importantEPs: [],
+    liveAlbums: [],
     bestCompilation: 'The Best Of - The 12\" Mixes',
     stillActive: true,
     countryOfOrigin: 'Germany',
     bestSong: 'Psychoburbia'
   },
 
-  nitzerEbb: {
+  {
     bandName: 'Nitzer Ebb',
     currentMembers: ['Bon Harris', 'Douglas McCarthy', 'Jason Payne'],
     pastMembers: ['David Gooday', 'Julian Beeston', 'Kourtney Klein'],
@@ -195,59 +195,59 @@ const ebmBands = {
     bestSong: 'Getting Closer'
   },
 
-  pouppeeFabrikk: {
+  {
     bandName: 'Pouppée Fabrikk',
     currentMembers: ['Christiaan Riemslag', 'Henrik Nordvargr Björkk', 'Jonas Aneheim', 'Leif Holm'],
     pastMembers: ['Jouni Ollila'],
     studioAlbums: ['Rage', 'Portent', 'We Have Come to Drop Bombs', 'Djävulan', 'Your Pain - Our Gain', 'The Dirt'],
     importantEPs: ['Summoning'],
-    liveAlbums: [null],
+    liveAlbums: [],
     bestCompilation: 'Crusader',
     stillActive: true,
     countryOfOrigin: 'Sweden',
     bestSong: 'Stahlwerk'
   },
 
-  vnvNation: {
+  {
     bandName: 'VNV Nation',
     currentMembers: ['Ronan Harris'],
     pastMembers: ['Mark Jackson'],
     studioAlbums: ['Advance and Follow', 'Praise the Fallen', 'Empires', 'Futureperfect', 'Matter+Form', 'Judgement', 'Of Faith, Power and Glory', 'Automatic', 'Transnational', 'Resonance - Music for Orchestra Vol. 1'],
     importantEPs: ['Solitary EP'],
-    liveAlbums: [null],
+    liveAlbums: [],
     bestCompilation: 'Reformation 01',
     stillActive: true,
     countryOfOrigin: 'United Kingdom',
     bestSong: 'Joy'
   },
 
-  novakill: {
+  {
     bandName: 'Novakill',
     currentMembers: ['Craig L. Saunders (Sik)', 'Warren Bones'],
-    pastMembers: [null],
+    pastMembers: [],
     studioAlbums: ['Hard Tech for a Hard World', 'Kill Everyone', 'I Hate God', '(D)anger'],
-    importantEPs: [null],
-    liveAlbums: [null],
+    importantEPs: [],
+    liveAlbums: [],
     bestCompilation: null,
     stillActive: true,
     countryOfOrigin: 'Australia',
     bestSong: 'Why Won\'t You Die!?!'
   },
 
-  adKey: {
+  {
     bandName: 'AD:Key',
     currentMembers: ['Andrea Nowotny', 'Rene Nowotny'],
-    pastMembers: [null],
+    pastMembers: [],
     studioAlbums: ['Thema Nummer Eins', 'That\'s It!', 'Astrogator', 'Anthropozän', 'Reanimator'],
-    importantEPs: [null],
-    liveAlbums: [null],
+    importantEPs: [],
+    liveAlbums: [],
     bestCompilation: 'Five Years AD:Key (2007 - 2012)',
     stillActive: true,
     countryOfOrigin: 'Germany',
     bestSong: 'Hoch die Hämmer'
   },
 
-  theKlinik: {
+  {
     bandName: 'The Klinik',
     currentMembers: ['Mark Burghgraeve', 'Marc Verhaeghen'],
     pastMembers: ['Dirk Ivens', 'Eric Van Wonterghem', 'Ivo Dirkx', 'Peter Mastbooms', 'Sandy Nijs', 'Nick van den Eynde (Nickanor)'],
@@ -260,60 +260,58 @@ const ebmBands = {
     bestSong: 'Moving Hands'
   },
 
-  wumpscut: {
+  {
     bandName: ':wumpscut:',
     currentMembers: ['Rudolf Ratzinger'],
-    pastMembers: [null],
+    pastMembers: [],
     studioAlbums: ['Music for a Slaughtering Tribe', 'Bunkertor 7', 'Preferential Legacy', 'Embryodead', 'Boeses Junges Fleisch', 'Wreath of Barbs', 'Bone Peeler', 'Evoke', 'Cannibal Anthem', 'Body Census', 'Schädling', 'Fuckit', ':Siamese: - Auf Wiedersehn Im Massengrab', 'Schrekk & Grauss', 'Women and Satan First', 'Madman Szpital', 'Bulwark Bazooka', 'BlutSpukerTavern', 'Wüterich'],
-    importantEPs: [null],
-    liveAlbums: [null],
+    importantEPs: [],
+    liveAlbums: [],
     bestCompilation: ':innerfire:',
     stillActive: false,
     countryOfOrigin: 'Germany',
     bestSong: 'Soylent Green'
   },
 
-  dieForm: {
+  {
     bandName: 'Die Form',
     currentMembers: ['Éliane P.', 'Philippe Fichot'],
-    pastMembers: [null],
+    pastMembers: [],
     studioAlbums: ['Die Form', 'Die Form 2 \"Virgin Flavour\"', 'Die Puppe', 'Le Plomb des Cartes - La Loge Infernale', 'Excisions', 'Messe Basse', 'Some Experiences with Shock', 'Du Coeur Humain', 'Fetish', 'X-Action', 'Es Lebe der Tod', 'Poupée Mécanique', 'Photogrammes', 'Corpus Delicti', 'Confessions', 'Tears of Eros', 'Ad Infinitum', 'Suspiria De Profundis', 'Rose au Cœur Violet', 'L\'Âme Électrique', 'Duality', 'Extremum', 'InHuman', 'ExHuman', 'Bach Project', 'Noir Magnétique', 'Rayon X', 'Baroque Equinox'],
     importantEPs: ['Zoopsia'],
-    liveAlbums: [null],
+    liveAlbums: [],
     bestCompilation: 'Archives & Doküments',
     stillActive: true,
     countryOfOrigin: 'France',
     bestSong: 'Silent Order'
   },
 
-  pankow: {
+  {
     bandName: 'Pankow',
     currentMembers: ['Bram Declercq', 'Enzo Regi', 'Maurizio Fasolo', 'Sebastian Koch'],
     pastMembers: ['Alessandro Cellai', 'Alessandro Gimignani', 'Alessandro Micheli', 'Caterina Figaia', 'Davide Ragonesi', 'Fabio Pallanti', 'Gianluca Becuzzi', 'Mario Massa', 'Massimo Michelotti', 'Mauro Fasolo', 'Nardo Lunardi', 'Paolo Favati', 'Segio Pani', 'Valerio Viti'],
     studioAlbums: ['Throw Out Rite', 'Freiheit feur die Sklaven', 'Gisela', 'Omne Animal Triste Post Coitum', 'Treue Hunde', 'Pankow', 'Life is Offensive and Refuses to Apologise', 'Great Minds Against Themselves Conspire', 'And Shun the Cure They Most Desire'],
     importantEPs: ['Freedom for the Slaves', 'I Never Thought of the Consequences', 'Fuckart (A Symphony for Wankers)'],
-    liveAlbums: [null],
+    liveAlbums: [],
     bestCompilation: 'The Art of Gentle Revolution',
     stillActive: true,
     countryOfOrigin: 'Italy',
     bestSong: 'Me & My Ding-Dong'
   },
 
-  armageddonDildos: {
+  {
     bandName: 'Armageddon Dildos',
     currentMembers: ['Rene Nowotny', 'Ulf Häusgen', 'Uwe Kanka'],
     pastMembers: ['Dirk Krause', 'Steve Ritchie'],
     studioAlbums: ['That\'s Armageddon', 'Homicidal Dolls', 'Lost', 'Speed', 'Re:Match', 'Morgengrauen', 'Sangreal', 'Untergrund'],
     importantEPs: ['Fear', 'Herbstzeitlose'],
-    liveAlbums: [null],
+    liveAlbums: [],
     bestCompilation: 'East West',
     stillActive: true,
     countryOfOrigin: 'Germany',
     bestSong: 'In My Mind'
   }
 
-}
+]
 
-export {
-  ebmBands
-}
+module.exports = ebmBands;
