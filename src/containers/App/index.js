@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import './CSS/App.css';
-import Header from './Header.js'
-import BandInfo from './BandInfo.js'
-import { ebmBands } from './ebmDatabase.js'
+import './App.css';
+import { connect } from 'react-redux';
+import { fetchBands } from '../../thunks/fetchBands';
+import Header from '../../components/Header'
+import BandInfo from '../BandInfo'
 
 class App extends Component {
   constructor() {
@@ -13,6 +14,11 @@ class App extends Component {
     }
 
     this.takeEnterInfo = this.takeEnterInfo.bind(this)
+  }
+
+  componentDidMount = () => {
+    let { fetchBands } = this.props
+    fetchBands()
   }
 
   takeEnterInfo(enterInfo) {
@@ -31,11 +37,15 @@ class App extends Component {
     } else {
       return (
         <div className="App">
-          <BandInfo bandData={ebmBands}/>
+          <BandInfo />
         </div>
       );      
     }
   }
 }
 
-export default App;
+export const mapDispatchToProps = (dispatch) => ({
+  fetchBands: () => dispatch(fetchBands())
+});
+
+export default connect(null, mapDispatchToProps)(App);

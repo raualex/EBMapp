@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './utils/assets/cogwheel.svg';
-import './CSS/Header.css'
+import logo from '../../utils/assets/cogwheel.svg';
+import './Header.css'
 
 
 class Header extends Component {
