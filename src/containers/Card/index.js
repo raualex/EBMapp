@@ -9,23 +9,16 @@ class Card extends Component {
 
   render() {
     let { current_members } = this.props.selectedBand
-    // let bandMembers = current_members.map((name, index) => {
-    //   return <div key={index}>
-    //   <ul className="albumList">
-    //     <li className="albumTitle">{name}</li>
-    //   </ul>
-    // </div>
-    // })
-    console.log(JSON.parse(current_members))
-    // return this.props.selectedBand.current_members.map((name, index) => {
+
+    return current_members.map((name, index) => {
       return(
         <div key={2}>
-          {/* <ul className="albumList">
+          <ul className="albumList">
             <li className="albumTitle">{name}</li>
-          </ul> */}
+          </ul>
         </div>
       )
-    // })
+    })
   }
 }
 
