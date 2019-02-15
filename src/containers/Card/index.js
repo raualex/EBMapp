@@ -12,7 +12,7 @@ class Card extends Component {
 
     return current_members.map((name, index) => {
       return(
-        <div key={2}>
+        <div key={index}>
           <ul className="albumList">
             <li className="albumTitle">{name}</li>
           </ul>
