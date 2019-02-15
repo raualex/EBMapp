@@ -16,32 +16,33 @@ class BandInfo extends Component {
   }
 
   printCard(event) {
-    if (this.state.cardName !== event.target.innerHTML) {
-      this.setState({
-        cardName: event.target.innerHTML
-      })
-    } else {
-      this.setState({
-        cardName: ''
-      }) 
-    }
+    console.log(event.target.innerHTML)
+    // if (this.state.cardName !== event.target.innerHTML) {
+    //   this.setState({
+    //     cardName: event.target.innerHTML
+    //   })
+    // } else {
+    //   this.setState({
+    //     cardName: ''
+    //   }) 
+    // }
   }
 
   render() {
-    let bandNames = Object.keys(this.props.bandData)
+    let { bands } = this.props
     
-    return bandNames.map((name, index) => {
-      if (this.state.cardName === this.props.bandData[name].bandName) {
+    return bands.map((band, index) => {
+      if (this.state.cardName === band.band_name) {
         return(
           <div className="info-container" key={index}>
-            <h3 className="bandLink" onClick={this.printCard}>{this.props.bandData[name].bandName}</h3>
-            <Card cardInfo={this.props.bandData[name]}/>
+            <h3 className="bandLink" onClick={this.printCard}>{band.band_name}</h3>
+            <Card cardInfo={band}/>
           </div>
         )
       } else {
         return(
           <div className="info-container" key={index}>
-            <h3 className="bandLink" onClick={this.printCard}>{this.props.bandData[name].bandName}</h3>
+            <h3 className="bandLink" onClick={this.printCard}>{band.band_name}</h3>
           </div>
         )
       }
@@ -50,5 +51,8 @@ class BandInfo extends Component {
 
 }
 
+export const mapStateToProps = (state) => ({
+  bands: state.bandsList
+})
 
-export default BandInfo;
+export default connect(mapStateToProps)(BandInfo);

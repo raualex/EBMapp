@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './Card.css'
 
 class Card extends Component {
@@ -19,5 +20,8 @@ class Card extends Component {
   }
 }
 
+export const mapStateToProps = (state) => ({
+  bands: state.bandsList
+})
 
 export default Card;
