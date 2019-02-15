@@ -10,7 +10,7 @@ app.set('port', process.env.PORT || 3000);
 app.locals.title = 'EBM Bands';
 app.use(express.static('public'));
 
-app.get('https://ebm-app.herokuapp.com/api/v1/ebm_bands', (request, response) => {
+app.get('/api/v1/ebm_bands', (request, response) => {
   database('ebm_bands').select()
     .then((bands) => {
       response.status(200).json(bands);
