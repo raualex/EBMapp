@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './BandInfo.css'
 import Card from '../Card'
-
+import { setSelectedBand } from '../../reducers/bands-reducers';
+import { selectBand } from '../../actions/bands-actions';
 
 class BandInfo extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       cardName: ""
@@ -15,10 +17,16 @@ class BandInfo extends Component {
   }
 
   printCard(event) {
+    let { bands, setSelectedBand } = this.props
+
     if (this.state.cardName !== event.target.innerHTML) {
+      let foundBand = bands.find((band) => {
+        return band.band_name === event.target.innerHTML
+      })
       this.setState({
         cardName: event.target.innerHTML
       })
+      setSelectedBand(foundBand)
     } else {
       this.setState({
         cardName: ''
@@ -27,20 +35,20 @@ class BandInfo extends Component {
   }
 
   render() {
-    let bandNames = Object.keys(this.props.bandData)
+    let { bands, selectedBand } = this.props
     
-    return bandNames.map((name, index) => {
-      if (this.state.cardName === this.props.bandData[name].bandName) {
+    return bands.map((band, index) => {
+      if (this.state.cardName === band.band_name) {
         return(
           <div className="info-container" key={index}>
-            <h3 className="bandLink" onClick={this.printCard}>{this.props.bandData[name].bandName}</h3>
-            <Card cardInfo={this.props.bandData[name]}/>
+            <h3 className="bandLink" onClick={this.printCard}>{band.band_name}</h3>
+            <Card />
           </div>
         )
       } else {
         return(
           <div className="info-container" key={index}>
-            <h3 className="bandLink" onClick={this.printCard}>{this.props.bandData[name].bandName}</h3>
+            <h3 className="bandLink" onClick={this.printCard}>{band.band_name}</h3>
           </div>
         )
       }
@@ -49,5 +57,13 @@ class BandInfo extends Component {
 
 }
 
+export const mapStateToProps = (state) => ({
+  bands: state.bandsList,
+  selectedBand: state.selectedBand
+})
 
-export default BandInfo;
+export const mapDispatchToProps = (dispatch) => ({
+  setSelectedBand: (bandInfo) => dispatch(selectBand(bandInfo))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(BandInfo);

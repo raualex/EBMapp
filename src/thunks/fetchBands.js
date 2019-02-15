@@ -11,7 +11,6 @@ export const fetchBands = () => {
       if (bandsInfo) {
         dispatch(isLoading(false))
       }
-      console.log(bandsInfo)
       dispatch(getBands(bandsInfo))
     } catch (error) {
       console.log(error)

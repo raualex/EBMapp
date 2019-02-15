@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from '../../utils/assets/cogwheel.svg';
 import './Header.css'
 
@@ -17,11 +18,12 @@ class Header extends Component {
   }
 
   handleClick(event) {
-    event.preventDefault()
-    this.setState({
-      entered: true
-    })
-    this.props.takeEnterInfo(this.state.entered)
+    // event.preventDefault()
+    // this.setState({
+    //   entered: true
+    // })
+    // this.props.takeEnterInfo(this.state.entered)
+    console.log('works')
   }
 
   handleHover() {
@@ -37,7 +39,15 @@ class Header extends Component {
       <header className="App-header">
         <h1 className="App-title">EBM DATABASE</h1>
         <img src={logo} className={imgClass} alt="logo" />
-        <button className="Enter-btn" onMouseEnter={this.handleHover}  onMouseLeave={this.handleHover} onClick={this.handleClick}>ENTER</button>
+        <NavLink 
+          to='/band-database'
+          className='Enter-btn'
+          onMouseEnter={this.handleHover}
+          onMouseLeave={this.handleHover}
+          onClick={this.handleClick}
+        >
+          ENTER
+        </NavLink>
       </header>
     )
   }

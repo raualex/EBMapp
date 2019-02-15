@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './Card.css'
 
 class Card extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {
-    return this.props.cardInfo.studioAlbums.map((albumName, index) => {
+    let { current_members } = this.props.selectedBand
+
+    return current_members.map((name, index) => {
       return(
         <div key={index}>
           <ul className="albumList">
-            <li className="albumTitle">{albumName}</li>
+            <li className="albumTitle">{name}</li>
           </ul>
         </div>
       )
@@ -19,5 +22,8 @@ class Card extends Component {
   }
 }
 
+export const mapStateToProps = (state) => ({
+  selectedBand: state.selectedBand
+})
 
-export default Card;
+export default connect(mapStateToProps)(Card);

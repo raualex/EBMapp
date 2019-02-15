@@ -6,3 +6,12 @@ export const setBands = (state = [], action) => {
       return state
   }
 }
+
+export const setSelectedBand = (state = {}, action) => {
+  switch(action.type) {
+    case 'SELECTED_BAND':
+      return action.band
+    default:
+      return state
+  }
+}
