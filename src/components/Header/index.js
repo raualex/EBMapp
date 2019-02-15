@@ -13,17 +13,7 @@ class Header extends Component {
       entered: false
     }
 
-    this.handleClick = this.handleClick.bind(this)
     this.handleHover = this.handleHover.bind(this)
-  }
-
-  handleClick(event) {
-    // event.preventDefault()
-    // this.setState({
-    //   entered: true
-    // })
-    // this.props.takeEnterInfo(this.state.entered)
-    console.log('works')
   }
 
   handleHover() {
@@ -44,7 +34,6 @@ class Header extends Component {
           className='Enter-btn'
           onMouseEnter={this.handleHover}
           onMouseLeave={this.handleHover}
-          onClick={this.handleClick}
         >
           ENTER
         </NavLink>
