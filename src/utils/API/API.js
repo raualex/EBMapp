@@ -8,3 +8,9 @@ export const retrieveBands = async () => {
   })
   return cleanedBands
 }
+
+export const retrieveAlbums = async () => {
+  const response = await fetch('https://ebm-app.herokuapp.com/api/v1/albums')
+  const data = await response.json()
+  return data
+}

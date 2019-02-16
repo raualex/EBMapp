@@ -3,6 +3,7 @@ import './App.css';
 import { connect } from 'react-redux';
 import { Route, withRouter, Switch } from 'react-router-dom';
 import { fetchBands } from '../../thunks/fetchBands';
+import { fetchAlbums } from '../../thunks/fetchAlbums';
 import Header from '../../components/Header'
 import BandInfo from '../BandInfo'
 
@@ -14,19 +15,13 @@ class App extends Component {
       entered: false
     }
 
-    // this.takeEnterInfo = this.takeEnterInfo.bind(this)
   }
 
   componentDidMount = () => {
-    let { fetchBands } = this.props
+    let { fetchBands, fetchAlbums } = this.props
     fetchBands()
+    fetchAlbums()
   }
-
-  // takeEnterInfo() {
-  //   this.setState({
-  //     entered: true
-  //   })
-  // }
 
   render() {
     return (
@@ -41,7 +36,8 @@ class App extends Component {
 }
 
 export const mapDispatchToProps = (dispatch) => ({
-  fetchBands: () => dispatch(fetchBands())
+  fetchBands: () => dispatch(fetchBands()),
+  fetchAlbums: () => dispatch(fetchAlbums())
 });
 
 export default withRouter(connect(null, mapDispatchToProps)(App));

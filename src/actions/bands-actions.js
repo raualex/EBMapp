@@ -1,6 +1,6 @@
-export const getBands = (bandInfo) => ({
+export const getBands = (bandsInfo) => ({
   type: 'GET_BANDS',
-  bands: bandInfo
+  bands: bandsInfo
 });
 
 export const selectBand = (bandInfo) => ({
