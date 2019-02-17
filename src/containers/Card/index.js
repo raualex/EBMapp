@@ -8,13 +8,15 @@ class Card extends Component {
   }
 
   render() {
-    let { current_members } = this.props.selectedBand
+    let { selectedBand, albumsList } = this.props
 
-    return current_members.map((name, index) => {
+    let filteredAlbums = albumsList[selectedBand.id]
+    
+    return filteredAlbums.map((album, index) => {
       return(
         <div key={index}>
           <ul className="albumList">
-            <li className="albumTitle">{name}</li>
+            <li className="albumTitle">{album.album_title}</li>
           </ul>
         </div>
       )
@@ -23,7 +25,8 @@ class Card extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  selectedBand: state.selectedBand
+  selectedBand: state.selectedBand,
+  albumsList: state.albumsList
 })
 
 export default connect(mapStateToProps)(Card);

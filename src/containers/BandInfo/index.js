@@ -35,7 +35,7 @@ class BandInfo extends Component {
   }
 
   render() {
-    let { bands, selectedBand } = this.props
+    let { bands } = this.props
     
     return bands.map((band, index) => {
       if (this.state.cardName === band.band_name) {
