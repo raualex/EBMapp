@@ -44,7 +44,7 @@ class NewBandForm extends Component {
   }
 
   render() {
-    let { stillActive } = this.state
+    let { bandName, stillActive, countryOfOrigin } = this.state
 
     return (
       <form className='band-inputs-container'>
@@ -55,6 +55,7 @@ class NewBandForm extends Component {
           name='band-name'
           className='band-input'
           onChange={this.handleChange}
+          value={bandName}
         />
         <h3 className='band-input-title'>Current Members:</h3>
         <CurrentMembersForm clickFunc={this.handleClick} />
@@ -86,7 +87,8 @@ class NewBandForm extends Component {
           type='text'
           name='country'
           className='band-input' 
-          onChange={this.handleChange}       
+          onChange={this.handleChange}
+          value={countryOfOrigin}       
         />
         <button
           name='submit'
