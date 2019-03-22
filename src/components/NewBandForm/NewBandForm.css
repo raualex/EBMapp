@@ -1,0 +1,39 @@
+.band-inputs-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+  width: 100%;
+}
+
+.band-form-title {
+  color: #fff;
+}
+
+.band-input-title {
+  color: #fff;
+}
+
+.band-input {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  padding: 10px 20px 10px 20px;
+  width: 40%;
+}
+
+.radio-input-label {
+  margin-top: 3px;
+}
+
+.radio-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 160px;
+}
+
+.radio-input {
+  margin-left: 34px;
+  margin-right: 25px;
+  width: 18px;
+}

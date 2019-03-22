@@ -4,8 +4,9 @@ import { connect } from 'react-redux';
 import { Route, withRouter, Switch } from 'react-router-dom';
 import { fetchBands } from '../../thunks/fetchBands';
 import { fetchAlbums } from '../../thunks/fetchAlbums';
-import Header from '../../components/Header'
-import BandInfo from '../BandInfo'
+import Header from '../../components/Header';
+import BandInfo from '../BandInfo';
+import NewBandForm from '../../components/NewBandForm';
 
 class App extends Component {
   constructor() {
@@ -29,6 +30,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Header} />
           <Route exact path='/band-database' component={BandInfo} />
+          <Route exact path='/new-band' component={NewBandForm} />
         </Switch>
       </div>
     )
