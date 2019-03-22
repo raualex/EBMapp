@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './BandInfo.css'
 import Card from '../Card'
-import { setSelectedBand } from '../../reducers/bands-reducers';
 import { selectBand } from '../../actions/bands-actions';
 
 class BandInfo extends Component {
