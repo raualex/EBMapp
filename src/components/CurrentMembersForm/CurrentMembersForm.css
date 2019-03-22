@@ -1,0 +1,14 @@
+.current-members-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+
+.current-members-input {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  padding: 10px 20px 10px 20px;
+  width: 100%;
+}

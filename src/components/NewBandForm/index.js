@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './NewBandForm.css';
+import CurrentMembersForm from '../CurrentMembersForm';
+import PastMembersForm from '../PastMembersForm';
 
 class NewBandForm extends Component {
   constructor() {
@@ -19,6 +21,8 @@ class NewBandForm extends Component {
 
     if (name === 'band-name') {
       this.setState({ bandName: value })
+    } else if (name === 'country') {
+      this.setState({ countryOfOrigin: value })
     }
   }
 
@@ -28,15 +32,22 @@ class NewBandForm extends Component {
     this.setState({ stillActive: name })
   }
 
-  handleClick = (event) => {
+  handleClick = (event, actionStateVal) => {
     let { name } = event.target
+    event.preventDefault()
+
+    if (actionStateVal) {
+      console.log(actionStateVal)
+    } else if (name === 'submit') {
+      console.log('bitches')
+    }
   }
 
   render() {
     let { stillActive } = this.state
 
     return (
-      <div className='band-inputs-container'>
+      <form className='band-inputs-container'>
         <h1 className='band-form-title'>Enter a New Band in the Database</h1>
         <h3 className='band-input-title'>Band Name:</h3>
         <input
@@ -46,27 +57,9 @@ class NewBandForm extends Component {
           onChange={this.handleChange}
         />
         <h3 className='band-input-title'>Current Members:</h3>
-        <input
-          type='text'
-          name='current-members'
-          className='band-input'
-          onChange={this.handleChange}
-        />
-        <button 
-          name='add-current-member'
-          onClick={this.handleClick}
-        >Add More</button>
+        <CurrentMembersForm clickFunc={this.handleClick} />
         <h3 className='band-input-title'>Past Members:</h3>
-        <input 
-          type='text'
-          name='past-members'
-          className='band-input'
-          onChange={this.handleChange}
-        />
-        <button
-          name='add-past-member'
-          onClick={this.handleClick}
-        >Add More</button>
+        <PastMembersForm clickFunc={this.handleClick} />
         <h3 className='band-input-title'>Still Active?:</h3>
         <div className='radio-container'>
           <input 
@@ -99,7 +92,7 @@ class NewBandForm extends Component {
           name='submit'
           onClick={this.handleClick}
         >Post to Database</button>
-      </div>
+      </form>
     )
   }
 }
