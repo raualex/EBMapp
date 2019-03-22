@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './CurrentMembersForm.css'
+import MemberCard from '../MemberCard';
 
 class CurrentMembersForm extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class CurrentMembersForm extends Component {
     event.preventDefault()
 
     if (currentMember !== '') {
-      clickFunc(event, currentMember)
+      clickFunc(event, currentMember, 'current')
       this.setState({ currentMember: '' })
     } else {
       return
@@ -31,9 +32,16 @@ class CurrentMembersForm extends Component {
 
   render() {
     let { currentMember } = this.state
+    let { members } = this.props
+    let membersList;
+
+    if (members.length) {
+      membersList = <MemberCard memberNames={members} />
+    }
 
     return (
       <div className='current-members-container'>
+        { membersList }
         <input
           type='text'
           name='current-members'

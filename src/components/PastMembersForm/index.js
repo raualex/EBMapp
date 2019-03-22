@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './PastMembersForm.css'
+import MemberCard from '../MemberCard';
 
 class PastMembersForm extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class PastMembersForm extends Component {
     event.preventDefault()
     
     if (pastMember !== '') {
-      clickFunc(event, pastMember)
+      clickFunc(event, pastMember, 'past')
       this.setState({ pastMember: '' })
     } else {
       return
@@ -31,9 +32,16 @@ class PastMembersForm extends Component {
 
   render() {
     let { pastMember } = this.state
+    let { members } = this.props
+    let membersList;
+
+    if (members.length) {
+      membersList = <MemberCard memberNames={members} />
+    }
 
     return (
       <div className='past-members-container'>
+      { membersList }
         <input
           type='text'
           name='past-members'

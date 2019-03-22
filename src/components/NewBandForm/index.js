@@ -32,19 +32,25 @@ class NewBandForm extends Component {
     this.setState({ stillActive: name })
   }
 
-  handleClick = (event, actionStateVal) => {
+  handleClick = (event, actionStateVal, memberType) => {
     let { name } = event.target
     event.preventDefault()
 
-    if (actionStateVal) {
-      console.log(actionStateVal)
+    if (actionStateVal && memberType === 'current') {
+      let oldMembersList = this.state.currentMembers
+      let newMembersList = [...oldMembersList, actionStateVal]
+      this.setState({ currentMembers: newMembersList })
+    } else if (actionStateVal && memberType === 'past') {
+      let oldMembersList = this.state.pastMembers
+      let newMembersList = [...oldMembersList, actionStateVal]
+      this.setState({ pastMembers: newMembersList })
     } else if (name === 'submit') {
       console.log('bitches')
     }
   }
 
   render() {
-    let { bandName, stillActive, countryOfOrigin } = this.state
+    let { bandName, currentMembers, pastMembers, stillActive, countryOfOrigin } = this.state
 
     return (
       <form className='band-inputs-container'>
@@ -58,9 +64,9 @@ class NewBandForm extends Component {
           value={bandName}
         />
         <h3 className='band-input-title'>Current Members:</h3>
-        <CurrentMembersForm clickFunc={this.handleClick} />
+        <CurrentMembersForm clickFunc={this.handleClick} members={currentMembers} />
         <h3 className='band-input-title'>Past Members:</h3>
-        <PastMembersForm clickFunc={this.handleClick} />
+        <PastMembersForm clickFunc={this.handleClick} members={pastMembers} />
         <h3 className='band-input-title'>Still Active?:</h3>
         <div className='radio-container'>
           <input 
