@@ -1,3 +1,17 @@
+.member-list-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.member-list {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
 .member-name {
   color: #fff;
+  list-style-type: none;
 }

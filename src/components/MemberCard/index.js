@@ -11,8 +11,8 @@ class MemberCard extends Component {
     });
 
     return (
-      <div>
-        <ul>
+      <div className='member-list-container'>
+        <ul className='member-list'>
           { membersList }
         </ul> 
       </div>
